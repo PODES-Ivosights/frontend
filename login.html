@@ -10,7 +10,24 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#" class="textNavbar"><img src="Asset/close_small.svg" alt="close_small"></a></li>
+            <li><a href="index.html" class="textNavbar">Beranda</a></li>
+            <li><a href="kontak.html" class="textNavbar">Kontak</a></li>
+            <li><a href="login.html" class="textNavbar">Login</a></li>
+            <li><a href="signup.html" class="textNavbar">Sign Up Free</a></li>
+        </ul>
+        <ul>
+            <li><a href="#" class="textNavbar"><img src="Asset/ivoo.svg" alt="ivoo" width="100" height="26"></a></li>
+            <li class="hideOnMobile"><a href="index.html" class="textNavbar">Beranda</a></li>
+            <li class="hideOnMobile"><a href="kontak.html" class="textNavbar">Kontak</a></li>
+            <li class="hideOnMobile"><a href="login.html" class="textNavbar">Login</a></li>
+            <li class="hideOnMobile"><a href="signup.html" class="textNavbar">Sign Up Free</a></li>
+            <li onclick=showSidebar() class="menu-button"><a href="#"><img src="Asset/menu.svg" alt="sidebar"></a></li>
+        </ul>
+    </nav>
+
 
     <script src="main.js"></script>
 </body>

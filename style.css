@@ -23,7 +23,7 @@ body{
 }
 
 /* Fonts */
-h1  {
+h1{  /* Main Title */
   font-family: "League Spartan";
   font-size: 48px;
   font-style: normal;
@@ -35,7 +35,7 @@ h1  {
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-h2  {
+h2{ /* Nama Lokasi */
   font-family: "League Spartan";
   font-size: 40px;
   font-style: normal;
@@ -54,7 +54,7 @@ h2  {
   color: var(--textWhite);
 }
 
-h3  {
+h3{ /* Heading section kategori */
   font-family: "Alata";
   font-size: 28px;
   font-style: normal;
@@ -63,7 +63,7 @@ h3  {
   color: var(--textBlack);
 }
 
-h4 {
+h4{ /* Table Header */
   font-family: "Alata";
   font-size: 24px;
   font-style: normal;
@@ -72,7 +72,7 @@ h4 {
   color: var(--textBlack);
 }
 
-h5 {
+.headingFooter{ /* Footer Heading */
   font-family: 'Inter';
   font-size: 20px;
   font-style: normal;
@@ -81,7 +81,7 @@ h5 {
   color: var(--textBlack);
 }
 
-h6 {
+.subheadingFooter{ /* Footer Subheader */
   font-family: 'Inter';
   font-size: 16px;
   font-style: normal;
@@ -107,7 +107,7 @@ h6 {
   color: var(--textWhite);
 }
 
-.textSmall {
+.textSmall { /* Box kategori */
   font-family: 'Alata';
   font-size: 20px;
   font-style: normal;
@@ -124,13 +124,14 @@ h6 {
   color: var(--textWhite);
 }
 
-.textNavbar {
+.textNavbar{ /* Teks biasa di header dan footer */
   font-family: 'Inter';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   color: var(--textBlack);
+  line-height: 1.5;
 }
 
 a {
@@ -138,7 +139,20 @@ a {
   text-decoration: none;
 }
 
+ul.no-bullets{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img.auto-width {
+  height: 20px;
+  width: auto;
+}
+
 nav{
+  position: sticky;
+  top: 0;
   background-color: var(--bgDark);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
@@ -187,7 +201,43 @@ nav a{
 }
 .sidebar a{
   width: 100%;
-} 
+}
+
+#footer-container{
+  display: flex;
+  background-color: var(--bgDark);
+  padding: 32px 128px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+#footer-bottom{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+#footer-address{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  flex-grow: 2;
+  flex-shrink: 1;
+  gap: 8px;
+}
+.footerItems{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 2;
+}
+#footer-socials{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
 /* button */
 .btn1 {
