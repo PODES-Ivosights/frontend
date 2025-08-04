@@ -44,6 +44,15 @@ h2  {
   text-transform: capitalize;
   color: var(--textBlack);
 }
+.heading2{
+  font-family: "League Spartan";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: capitalize;
+  color: var(--textWhite);
+}
 
 h3  {
   font-family: "Alata";
@@ -89,6 +98,14 @@ h6 {
   line-height: normal;
   color: var(--textBlack);
 }
+.paragraphWhite{
+  font-family: 'Alata';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--textWhite);
+}
 
 .textSmall {
   font-family: 'Alata';
@@ -97,6 +114,14 @@ h6 {
   font-weight: 400;
   line-height: normal;
   color: var(--textBlack);
+}
+.textSmallWhite {
+  font-family: 'Alata';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--textWhite);
 }
 
 .textNavbar {
@@ -110,10 +135,59 @@ h6 {
 
 a {
   color: inherit;
-  text-decoration: inherit;
+  text-decoration: none;
 }
 
+nav{
+  background-color: var(--bgDark);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li{
+  height: 50px;
+}
+nav li:first-child{
+  margin-right: auto;
+}
+nav a{
+  height: 100%;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  color: var(--textBlack);
+}
 
+.menu-button{
+  display: none;
+}
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: #edf2f733;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+  width: 100%;
+}
+.sidebar a{
+  width: 100%;
+} 
 
 /* button */
 .btn1 {
@@ -147,4 +221,18 @@ a {
   border: 2px solid var(--textBlack);
   background: var(--textBlack);
   color: var(--white);
+}
+
+@media(max-width: 600px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+}
+@media(max-width: 400px){
+  .sidebar{
+    width: 100%;
+  }
 }

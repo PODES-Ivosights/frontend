@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,13 +11,30 @@
 </head>
 <body>
     <nav>
-        <a href="#">Beranda</a>
-        <a href="kontak.html">Kontak</a>
-        <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up Free</a>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#" class="textNavbar"><img src="Asset/close_small.svg" alt="close_small"></a></li>
+            <li><a href="login.html" class="textNavbar">Beranda</a></li>
+            <li><a href="kontak.html" class="textNavbar">Kontak</a></li>
+            <li><a href="login.html" class="textNavbar">Login</a></li>
+            <li><a href="signup.html" class="textNavbar">Sign Up Free</a></li>
+        </ul>
+        <ul>
+            <li><a href="#" class="textNavbar">Logo</a></li>
+            <li class="hideOnMobile"><a href="login.html" class="textNavbar">Beranda</a></li>
+            <li class="hideOnMobile"><a href="kontak.html" class="textNavbar">Kontak</a></li>
+            <li class="hideOnMobile"><a href="login.html" class="textNavbar">Login</a></li>
+            <li class="hideOnMobile"><a href="signup.html" class="textNavbar">Sign Up Free</a></li>
+            <li onclick=showSidebar() class="menu-button"><a href="#"><img src="Asset/menu.svg" alt="sidebar"></a></li>
+        </ul>
     </nav>
     <h1>Satu Website untuk Seluruh Desa Indonesia</h1>
-    <p>Temukan seluruh informasi lengkap tentang ribuan desa di seluruh penjuru negeri. Jelajahi kekayaan nusantara melalui satu platform yang menyajikan informasi lengkap dan akurat tentang ribuan desa di seluruh penjuru Indonesia — mulai dari profil wilayah, potensi lokal, budaya, hingga layanan digital desa.</p>
-    <a href="login.html">Mulai Pencariran <img src="Asset/arrow_forward_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="right-arrow"></button>
+    <p class="paragraph">Temukan seluruh informasi lengkap tentang ribuan desa di seluruh penjuru negeri. Jelajahi kekayaan nusantara melalui satu platform yang menyajikan informasi lengkap dan akurat tentang ribuan desa di seluruh penjuru Indonesia — mulai dari profil wilayah, potensi lokal, budaya, hingga layanan digital desa.</p>
+    <a href="login.html" class="paragraphWhite">
+        Mulai Pencarian 
+        <img src="Asset/arrow_forward.svg" alt="arrow_forward">
+    </a>
+
+
+    <script src="main.js"></script>
 </body>
 </html>
