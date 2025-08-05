@@ -1,41 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
-    <title>Web Desa - Ivosights</title>
+    <title>Kontak - Web Desa</title>
 </head>
 <body>
     <nav>
         <ul class="sidebar no-bullets">
             <li onclick=hideSidebar()><a href="#" class="textNavbar"><img src="Asset/close_small.svg" alt="close_small"></a></li>
-            <li><a href="login.html" class="textNavbar">Beranda</a></li>
-            <li><a href="kontak-nonloggedin.html" class="textNavbar">Kontak</a></li>
+            <li><a href="index.html" class="textNavbar">Beranda</a></li>
+            <li><a href="kontak.html" class="textNavbar">Kontak</a></li>
             <li><a href="login.html" class="textNavbar buttonSmall greenBorder">Login</a></li>
             <li><a href="signup.html" class="textNavbar buttonSmall greenFill">Sign Up Free</a></li>
         </ul>
         <ul class="no-bullets">
             <li><a href="#" class="textNavbar"><img src="Asset/ivoo.svg" alt="ivoo" width="100" height="26"></a></li>
-            <li class="hideOnMobile"><a href="login.html" class="textNavbar">Beranda</a></li>
-            <li class="hideOnMobile"><a href="kontak-nonloggedin.html" class="textNavbar">Kontak</a></li>
+            <li class="hideOnMobile"><a href="index.html" class="textNavbar">Beranda</a></li>
+            <li class="hideOnMobile"><a href="kontak.html" class="textNavbar">Kontak</a></li>
             <li class="hideOnMobile"><a href="login.html" class="textNavbar buttonSmall greenBorder">Login</a></li>
             <li class="hideOnMobile"><a href="signup.html" class="textNavbar buttonSmall greenFill">Sign Up Free</a></li>
             <li onclick=showSidebar() class="menu-button"><a href="#"><img src="Asset/menu.svg" alt="sidebar"></a></li>
         </ul>
     </nav>
 
-    <div id="mainContent">
-        <h1 id="heading1" class="mainTitle">Satu Website untuk Seluruh Desa Indonesia</h1>
-        <p id="paragraph" class="paragraph">Temukan seluruh informasi lengkap tentang ribuan desa di seluruh penjuru negeri. Jelajahi kekayaan nusantara melalui satu platform yang menyajikan informasi lengkap dan akurat tentang ribuan desa di seluruh penjuru Indonesia — mulai dari profil wilayah, potensi lokal, budaya, hingga layanan digital desa.</p>
+    <div id="kontak">
+        <div id="textCard">
+            <p class="textNavbar">HADIR UNTUK MEMBANTU</p>
+            <h1 class="secondaryTitle">Akselerasikan Bisnis Anda</h1>
+            <p class="textNavbar">lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        </div>
+        <div id="messageCard" class="messageCard">
+            <form id="messageForm" action=""> <!-- ini diisi PHP -->
+                <label for="NamaLengkap" class="subheadingFooter">Nama Lengkap<span class="asterisk">*</span></label><br>
+                <input required placeholder="Nama Lengkap Anda" type="text" name="NamaLengkap" id="NamaLengkap"><br>
 
-        <a href="login.html" class="paragraph buttonBig greenFill">
-            Mulai Pencarian 
-            <img src="Asset/arrow_forward.svg" alt="arrow_forward" height="20px">
-        </a>
+                <label for="NoTelp" class="subheadingFooter">Nomor Telepon<span class="asterisk">*</span></label><br>
+                <input required placeholder="08xxxxxx" type="number" name="NoTelp" id="NoTelp"><br>
+
+                <label for="NamaPerusahaan" class="subheadingFooter">Nama Perusahaan<span class="asterisk">*</span></label><br>
+                <input required placeholder="Nama Bisnis Anda" type="text" name="NamaPerusahaan" id="NamaPerusahaan"><br>
+
+                <label for="email" class="subheadingFooter">Email Perusahaan<span class="asterisk">*</span></label><br>
+                <input required placeholder="mail@example.com" type="email" name="email" id="email"><br>
+
+                <label for="yourMessage" class="subheadingFooter">Pesan<span class="asterisk">*</span></label><br>
+                <textarea required placeholder="Tulis pesan Anda di sini." rows="5" name="yourMessage" id="yourMessage"></textarea><br>
+
+                <button class="textNavbar buttonSmall greenFill">Kirimkan</button>
+            </form>
+        </div>
     </div>
 
     <div id="footer">
