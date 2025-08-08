@@ -11,18 +11,16 @@
     <nav>
         <ul class="sidebar no-bullets">
             <li onclick=hideSidebar()><a href="#" class="textNavbar"><img src="Asset/close_small.svg" alt="close_small"></a></li>
-            <li><a href="index.html" class="textNavbar">Beranda</a></li>
-            <li><a href="kontak.html" class="textNavbar">Kontak</a></li>
-            <li><a href="login.html" class="textNavbar buttonSmall greenBorder">Login</a></li>
-            <li><a href="signup.html" class="textNavbar buttonSmall greenFill">Sign Up Free</a></li>
+            <li><a href="home.html" class="textNavbar">Beranda</a></li>
+            <li><a href="kontak-loggedin.html" class="textNavbar">Kontak</a></li>
+            <li><a href="index.html" class="textNavbar buttonSmall greenFill">Log Out</a></li>
         </ul>
         <ul class="no-bullets">
             <li><a href="#" class="textNavbar"><img src="Asset/ivoo.svg" alt="ivoo" width="100" height="26"></a></li>
-            <li class="hideOnMobile"><a href="index.html" class="textNavbar">Beranda</a></li>
-            <li class="hideOnMobile"><a href="kontak.html" class="textNavbar">Kontak</a></li>
-            <li class="hideOnMobile"><a href="login.html" class="textNavbar buttonSmall greenBorder">Login</a></li>
+            <li class="hideOnMobile"><a href="home.html" class="textNavbar">Beranda</a></li>
+            <li class="hideOnMobile"><a href="kontak-loggedin.html" class="textNavbar">Kontak</a></li>
             <li onclick=showSidebar() class="menu-button"><a href="#"><img src="Asset/menu.svg" alt="sidebar"></a></li>
-            <li class="hideOnMobile"><a href="signup.html" class="textNavbar buttonSmall greenFill">Sign Up Free</a></li>
+            <li class="hideOnMobile"><a href="index.html" class="textNavbar buttonSmall greenFill">Log Out</a></li>
         </ul>
     </nav>
 
@@ -39,27 +37,27 @@
             <form action=""> <!-- ini diisi PHP -->
                 <div>
                     <label for="NamaLengkap" class="subheadingFooter">Nama Lengkap<span class="asterisk">*</span></label><br>
-                    <input required placeholder="Nama Lengkap Anda" type="text" name="NamaLengkap" id="NamaLengkap"><br>
+                    <input required placeholder="Nama Lengkap Anda" type="text" name="NamaLengkap" id="NamaLengkap" class="kontak-input form-control"><br>
                 </div>
 
                 <div>
                     <label for="NoTelp" class="subheadingFooter">Nomor Telepon<span class="asterisk">*</span></label><br>
-                    <input required placeholder="08xxxxxx" type="number" name="NoTelp" id="NoTelp"><br>
+                    <input required placeholder="08xxxxxx" type="number" name="NoTelp" id="NoTelp" class="form-control"><br>
                 </div>
 
                 <div>
                     <label for="NamaPerusahaan" class="subheadingFooter">Nama Perusahaan<span class="asterisk">*</span></label><br>
-                    <input required placeholder="Nama Bisnis Anda" type="text" name="NamaPerusahaan" id="NamaPerusahaan"><br>
+                    <input required placeholder="Nama Bisnis Anda" type="text" name="NamaPerusahaan" id="NamaPerusahaan" class="form-control"><br>
                 </div>
 
                 <div>
                     <label for="email" class="subheadingFooter">Email Perusahaan<span class="asterisk">*</span></label><br>
-                    <input required placeholder="mail@example.com" type="email" name="email" id="email"><br>
+                    <input required placeholder="mail@example.com" type="email" name="email" id="email" class="form-control"><br>
                 </div>
                 
                 <div>
                     <label for="yourMessage" class="subheadingFooter">Pesan<span class="asterisk">*</span></label><br>
-                    <textarea required placeholder="Tulis pesan Anda di sini." rows="5" name="yourMessage" id="yourMessage"></textarea><br>
+                    <textarea required placeholder="Tulis pesan Anda di sini." rows="5" name="yourMessage" id="yourMessage" class="form-control"></textarea><br>
                 </div>
                 
                 <button class="subheadingFooter buttonSmall greenFill" style="align-self: flex-start;">Kirimkan</button>
