@@ -164,41 +164,6 @@ nav a{
   display: none;
 }
 
-.account{
-  display: flex;
-  flex-direction: column;
-  padding: 32px;
-  background-color: var(--main);
-  border-radius: 20px;
-  color: var(--textWhite);
-  margin: auto;
-}
-.account form{
-  gap: 24px;
-}
-
-.form-input{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.form-input label{
-  position: absolute;
-  padding: 8px;
-}
-.form-input input{
-  border-radius: none;
-  background-color: var(--bgLight);
-  box-shadow: var(--shadow);
-  color: var(--textBlack);
-  padding-left: 38px;
-}
-.daftar-nama{
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
-}
-
 .sidebar{
   position: fixed;
   top: 0;
@@ -299,6 +264,102 @@ nav a{
   color: var(--textBlack);
 }
 
+#mulaiCari{
+  display: block;
+  cursor: pointer;
+}
+
+#searchBar{
+  display: none;
+}
+
+.search-container{
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  padding: 16px;
+  background-color: var(--main);
+  border-radius: 25px;
+  height: fit-content;
+  width: fit-content;
+}
+.search-container form{
+  display: flex;
+  gap: 16px;
+}
+
+.search-input{
+  color: var(--textBlack);
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--bgLight);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  display: flex;
+  padding: 0 0 0 8px;
+}
+
+.search-input > input{
+  border-radius: none;
+  padding: 8px;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.search-container > form > button{
+  border: none;
+  color: var(--textBlack);
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--bgLight);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  display: flex;
+  padding: 0 8px;
+}
+
+.account{
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background-color: var(--main);
+  border-radius: 20px;
+  color: var(--textWhite);
+  margin: auto;
+}
+.account form{
+  gap: 24px;
+}
+
+.form-input{
+  border-radius: 5px;
+  background-color: var(--bgLight);
+  box-shadow: var(--shadow);
+  color: var(--textBlack);
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+.form-input input{
+  width: 100%;
+  border-radius: none;
+  padding: 8px;
+  background-color: none;
+  box-shadow: none;
+}
+.form-input img{
+  cursor: pointer;
+  width: 20px;
+}
+.daftar-nama{
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
 .kontak{
   display: flex;
   flex-direction: row;
@@ -372,7 +433,13 @@ nav a{
   color: var(--textWhite);
 }
 
-form{
+.account form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+.kontak form{
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -446,6 +513,13 @@ form > a:hover{
     width: 100%;
     top: 40%;
   }
+  .search-container form{
+    flex-direction: column;
+    align-items: center;
+  }
+  .search-container > form > button{
+    padding: 5px;
+  }
 }
 
 /* Mobile Phone */
@@ -490,5 +564,12 @@ form > a:hover{
   }
   .daftar-nama{
     flex-direction: column;
+  }
+  .search-container form{
+    flex-direction: column;
+    align-items: center;
+  }
+  .search-container > form > button{
+    padding: 5px;
   }
 }

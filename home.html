@@ -3,30 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Desa - Web Desa</title>
 </head>
 <body>
     <nav>
-        <ul class="sidebar">
+        <ul class="sidebar no-bullets">
             <li onclick=hideSidebar()><a href="#" class="textNavbar"><img src="Asset/close_small.svg" alt="close_small"></a></li>
             <li><a href="home.html" class="textNavbar">Beranda</a></li>
-            <li><a href="kontak.html" class="textNavbar">Kontak</a></li>
-            <li><a href="index.html" class="textNavbar">Log Out</a></li>
+            <li><a href="kontak-loggedin.html" class="textNavbar">Kontak</a></li>
+            <li><a href="index.html" class="textNavbar buttonSmall greenFill">Log Out</a></li>
         </ul>
-        <ul>
+        <ul class="no-bullets">
             <li><a href="#" class="textNavbar"><img src="Asset/ivoo.svg" alt="ivoo" width="100" height="26"></a></li>
             <li class="hideOnMobile"><a href="home.html" class="textNavbar">Beranda</a></li>
-            <li class="hideOnMobile"><a href="kontak.html" class="textNavbar">Kontak</a></li>
-            <li class="hideOnMobile"><a href="index.html" class="textNavbar">Log Out</a></li>
+            <li class="hideOnMobile"><a href="kontak-loggedin.html" class="textNavbar">Kontak</a></li>
             <li onclick=showSidebar() class="menu-button"><a href="#"><img src="Asset/menu.svg" alt="sidebar"></a></li>
+            <li class="hideOnMobile"><a href="index.html" class="textNavbar buttonSmall greenFill">Log Out</a></li>
         </ul>
     </nav>
 
+    <div id="mainContent">
+        <h1 id="heading1" class="mainTitle">Satu Website untuk Seluruh Desa Indonesia</h1>
+        <p id="paragraph" class="paragraph">Temukan seluruh informasi lengkap tentang ribuan desa di seluruh penjuru negeri. Jelajahi kekayaan nusantara melalui satu platform yang menyajikan informasi lengkap dan akurat tentang ribuan desa di seluruh penjuru Indonesia — mulai dari profil wilayah, potensi lokal, budaya, hingga layanan digital desa.</p>
+
+        <div id="mulaiCari" onclick="openSearchBar()">
+            <div class="paragraph buttonBig greenFill">
+                Mulai Pencarian 
+                <img src="Asset/arrow_forward.svg" alt="arrow_forward" height="20px">
+            </div>
+        </div>
+
+        <div id="searchBar">
+            <div class="search-container">
+                <form action="">
+                    <div class="search-input">
+                        <label for="provinsi">
+                            <img src="Asset/map_search.svg" alt="map-search">
+                        </label>
+                        <input type="search" name="provinsi" id="provinsi" placeholder="Provinsi">
+                    </div>
+                    <div class="search-input">
+                        <label for="kabupaten">
+                            <img src="Asset/map_search.svg" alt="map-search">
+                        </label>
+                        <input type="search" name="kabupaten" id="kabupaten" placeholder="Kabupaten">
+                    </div>
+                    <div class="search-input">
+                        <label for="kecamatan">
+                            <img src="Asset/map_search.svg" alt="map-search">
+                        </label>
+                        <input type="search" name="kecamatan" id="kecamatan" placeholder="Kecamatan">
+                    </div>
+                    <div class="search-input">
+                        <label for="desa">
+                            <img src="Asset/map_search.svg" alt="map-search">
+                        </label>
+                        <input type="search" name="desa" id="desa" placeholder="Desa">
+                    </div>
+                    <button type="submit">
+                        <img src="Asset/search.svg" alt="search">
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <div id="footer-container">
+            <div id="footer-top">
+                <img src="Asset/ivoo.svg" alt="Ivosights" height="52" width="200">
+                <h1 class="headingFooter">PT. Ivonesia Solusi Data</h1>
+            </div>
+            <div id="footer-bottom">
+                <div id="footer-address">
+                    <div class="footerItems">
+                        <h2 class="subheadingFooter">Ivosights Jakarta (HQ)</h2>
+                        <p class="textNavbar">Jl. Tebet Raya No.62 Rt.02/04 Tebet Timur, Tebet, Jakarta Selatan, DKI Jakarta, Indonesia 12820</p>
+                    </div>
+                    <div class="footerItems">
+                        <h2 class="subheadingFooter">Ivosights Yogyakarta  (BO)</h2>
+                        <p class="textNavbar">Jl. Beo No.10a, Warak Kidul, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281</p>
+                    </div>
+                </div>
+                <div class="footerItems subheadingFooter">
+                    Tentang Kami
+                    <ul class="no-bullets textNavbar">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Syarat dan Ketentuan</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footerItems subheadingFooter">
+                    Temukan Kami
+                    <div id="footer-socials">
+                        <a href="https://api.whatsapp.com/send?phone=62881012070537" target="_blank">
+                            <img 
+                            src="Asset/socials/WA_Digital_Glyph_Green.svg" 
+                            class="auto-width"
+                            alt="WhatsApp">
+                        </a>
+                        <a href="https://x.com/ivosights" target="_blank">
+                            <img 
+                            src="Asset/socials/x-logo-black.png"
+                            class="auto-width"
+                            alt="X">
+                        </a>
+                        <a href="https://www.linkedin.com/company/ivosights/" target="_blank">
+                            <img 
+                            src="Asset/socials/LI-In-Bug.png"
+                            class="auto-width"
+                            alt="LinkedIn">
+                        </a>
+                        <a href="https://www.instagram.com/ivosights_id" target="_blank">
+                            <img 
+                            src="Asset/socials/Instagram_Glyph_Gradient.svg"
+                            class="auto-width"
+                            alt="Instagram">
+                        </a>
+                        <a href="https://www.tiktok.com/@ivosights" target="_blank">
+                            <img 
+                            src="Asset/socials/TikTok_Icon_Black_Circle.png"
+                            class="auto-width"
+                            alt="TikTok">
+                        </a>
+                        <a href="https://www.facebook.com/ivosights" target="_blank">
+                            <img 
+                            src="Asset/socials/Facebook_Logo_Primary.png"
+                            class="auto-width"
+                            alt="Facebook">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCbKrbNtCHCjHc-62Kr3GSpA" target="_blank">
+                            <img 
+                            src="Asset/socials/yt_icon_red_digital.png"
+                            class="auto-width"
+                            alt="YouTube">
+                        </a>
+                        <a href="mailto:hello@ivosights.com" target="_blank">
+                            <img 
+                            src="Asset/mail.svg"
+                            class="auto-width"
+                            alt="Mail">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>
