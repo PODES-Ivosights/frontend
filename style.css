@@ -19,8 +19,8 @@
 }
 
 body{
-  min-height: 100vh;
   background-size: cover;
+  background-color: var(--bgLight);
 }
 
 /* Fonts */
@@ -136,12 +136,12 @@ ul.no-bullets{
   padding: 0;
 }
 
-.footer-logo{
+img.footer_logo{
   height: 30px;
   width: auto;
 }
 
-img.auto-width { /* for socmed icons*/
+img.footer_icons { /* for socmed icons*/
   height: 20px;
   width: auto;
 }
@@ -213,61 +213,58 @@ nav a{
   height: fit-content;
 }
 
-#footer{
+.footer{
   display: flex;
-  bottom: 0;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  padding: 32px;
   background-color: var(--bgDark);
+  padding: 48px;
 }
-#footer-container{
+.footer_container{
   display: flex;
-  max-width: fit-content;
-  color: var(--textBlack);
   flex-direction: column;
-  align-items: flex-start;
-  justify-items: center;
   gap: 16px;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
 }
-#footer-top{
+.top_footer{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 24px;
-  max-width: fit-content;
+  margin: auto;
+  gap: 16px;
+  width: 100%;
 }
-#footer-bottom{
+.bottom_footer{
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+  gap: 16px;
   flex-wrap: wrap;
-  gap: 32px;
-  max-width: fit-content;
 }
-#footer-address{
+.addresses{
   display: flex;
   flex-direction: column;
-  max-width: 500px;
-  flex-grow: 2;
-  flex-shrink: 1;
-  gap: 8px;
+  min-width: 224px;
+  max-width: 458px;
+  gap: 16px;
 }
 .footerItems{
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  max-width: fit-content;
+  gap: 8px;
 }
-#footer-socials{
+.links{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.socials{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 8px;
+  width: 130px;
 }
 
 #mainContent{
@@ -563,15 +560,27 @@ table th.end, table td.end{
   background-color: transparent;
   color: var(--main);
 }
+nav .greenBorder:hover{
+  background-color: var(--main);
+  color: var(--textWhite);
+}
 .greenFill{
   border: 2px solid var(--main);
   background-color: var(--main);
   color: var(--textWhite);
 }
+nav .greenFill:hover{
+  background-color: transparent;
+  color: var(--main);
+}
 .blackFill{
   border: 2px solid var(--textBlack);
   background-color: var(--textBlack);
   color: var(--textWhite);
+}
+.blackFill:hover{
+  background-color: var(--textWhite);
+  color: var(--textBlack);
 }
 
 .account form{
@@ -664,6 +673,9 @@ form > a:hover{
   #kategori{
     min-width: 25%;
   }
+  .socials{
+    width: 100%;
+  }
 }
 
 /* Mobile Phone */
@@ -721,6 +733,12 @@ form > a:hover{
   }
   #kategori{
     min-width: 100%;
+  }
+  .footer{
+    padding: 32px;
+  }
+  .footerItems{
+    width: 100%;
   }
 }
 
