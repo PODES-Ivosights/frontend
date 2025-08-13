@@ -305,6 +305,7 @@ nav a{
   background-color: var(--main);
   border-radius: 25px;
   height: fit-content;
+  max-width: 900px;
   width: fit-content;
 }
 .search-container form{
