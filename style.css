@@ -11,7 +11,7 @@
   --bgDark: #EDF2F7;
   --hover: #1D8FA659;
   --tableHeader: #1D8FA6B3;
-  --tableOddRow: #1D8FA666;
+  --tableEvenRow: #1D8FA666;
   --search: #C8C8C8;
   --textWhite: #FFFFFF;
   --textBlack: #1E1F20;
@@ -26,7 +26,7 @@ body{
 /* Fonts */
 .mainTitle{  /* Main Title */
   font-family: "League Spartan";
-  font-size: 48px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
@@ -38,22 +38,14 @@ body{
 
 .secondaryTitle{ /* Nama Lokasi */
   font-family: "League Spartan";
-  font-size: 40px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   text-transform: capitalize;
 }
 
-.sectionTitle{ /* Heading section kategori */
-  font-family: "Alata";
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.tableHeader{ /* Table Header */
+.sectionTitle{ /* Heading section */
   font-family: "Alata";
   font-size: 24px;
   font-style: normal;
@@ -61,9 +53,46 @@ body{
   line-height: normal;
 }
 
+.kategoriTitle{ /* Heading kategori */
+  font-family: "Alata";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.tableHeader{ /* Table Header */
+  font-family: "Alata";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.paragraph{ /* teks normal */
+  font-family: 'Alata';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.deskripsi{ /* Deskripsi search result */
+  font-family: 'Alata';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.textSmall{ /* Box kategori */
+  font-family: 'Alata';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .headingFooter{ /* Footer Heading */
   font-family: 'Inter';
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -71,31 +100,22 @@ body{
 
 .subheadingFooter{ /* Footer Subheader */
   font-family: 'Inter';
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: 1.8;
 }
-
-.paragraph{
-  font-family: 'Alata';
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.textSmall { /* Box kategori */
-  font-family: 'Alata';
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.textNavbar{ /* Teks biasa di header dan footer */
+.textNavbar{ /* Teks biasa di header */
   font-family: 'Inter';
   font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  line-height: 1.5;
+}
+.textFooter{ /* Teks biasa di footer */
+  font-family: 'Inter';
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -116,7 +136,12 @@ ul.no-bullets{
   padding: 0;
 }
 
-img.auto-width {
+.footer-logo{
+  height: 30px;
+  width: auto;
+}
+
+img.auto-width { /* for socmed icons*/
   height: 20px;
   width: auto;
 }
@@ -253,13 +278,13 @@ nav a{
   margin: auto;
   padding: 64px 32px;
 }
-#heading1{
+#mainContent > h1{
   display: flex;
-  max-width: 700px;
+  max-width: 550px;
 }
-#paragraph{
+#mainContent > p{
   display: flex;
-  max-width: 900px;
+  max-width: 750px;
   text-align: center;
   color: var(--textBlack);
 }
@@ -319,6 +344,122 @@ nav a{
   box-shadow: var(--shadow);
   display: flex;
   padding: 0 8px;
+}
+
+#search_result{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bgDark);
+  color: var(--textBlack);
+  margin: auto;
+  max-width: 900px;
+  height: fit-content;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 32px;
+  gap: 32px;
+}
+#lineone{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+}
+#linetwo{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 32px;
+  max-width: 900px;
+}
+#kategori{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bgLight);
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 16px;
+  min-width: 20%;
+}
+#listKategori{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+#listKategori > div{
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 5px;
+}
+#listKategori > div.selected{
+  background-color: var(--main);
+  color: var(--textWhite);
+}
+#listKategori > div.selected:hover{
+  background-color: var(--main);
+  cursor: default;
+}
+#listKategori > div:hover{
+  background-color: var(--hover);
+}
+
+#informasi{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bgLight);
+  box-sizing: border-box;
+  border-radius: 15px;
+  gap: 16px;
+  padding: 16px;
+  color: var(--textBlack);
+}
+#informasi_umum{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+table{
+  border-spacing: 0;
+  width: 100%;
+  border-collapse: separate;
+}
+table thead tr th:first-child{
+  border-top-left-radius: 15px;
+}
+table thead tr th:last-child{
+  border-top-right-radius: 15px;
+}
+table tbody tr:last-child td:first-child{
+  border-bottom-left-radius: 15px;
+}
+table tbody tr:last-child td:last-child{
+  border-bottom-right-radius: 15px;
+}
+table thead th{
+  background-color: var(--tableHeader)
+}
+table tbody tr{
+  background-color: var(--bgLight);
+  &:nth-child(even){
+      background-color: var(--tableEvenRow);
+  }
+}
+table th, table td{
+  border: 1px solid var(--textBlack);
+  padding: 8px;
+}
+table th.number, table td.number{
+  text-align: end;
+  width: 5%;
+}
+table th.middle, table td.middle{
+  text-align: start;
+}
+table th.end, table td.end{
+  text-align: start;
+  width: 25%;
 }
 
 .account{
@@ -520,6 +661,9 @@ form > a:hover{
   .search-container > form > button{
     padding: 5px;
   }
+  #kategori{
+    min-width: 25%;
+  }
 }
 
 /* Mobile Phone */
@@ -571,5 +715,22 @@ form > a:hover{
   }
   .search-container > form > button{
     padding: 5px;
+  }
+  #linetwo{
+    flex-direction: column;
+  }
+  #kategori{
+    min-width: 100%;
+  }
+}
+
+/* Smaller phone */
+@media(max-width: 320px){
+  *{
+    font-size: 0.9rem;
+  }
+  #search_result{
+    padding: 16px;
+    gap: 16px;
   }
 }

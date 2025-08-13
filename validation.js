@@ -63,13 +63,3 @@ function getLoginFormErrors(email, password){
 
     return errors;
 }
-
-const allInputs = [firstname_input, lastname_input, email_input, password_input, confirm_password_input]
-
-allInputs.forEach(input => {
-    input.addEventListener('input', () => {
-        if(input.parentElement.classList.contains('incorrect')){
-            input.parentElement.classList.remove('incorrect')
-        }
-    })
-})
